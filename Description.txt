@@ -1,0 +1,7 @@
+Javascript form to report various information about a packet of string data:
+
+ - Length
+ - # spaces
+ - # words (?)
+ - # special characters
+ - # of words >|< # (e.g. "__ words < 3 characters long")
