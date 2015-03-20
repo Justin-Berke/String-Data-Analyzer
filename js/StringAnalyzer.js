@@ -46,7 +46,7 @@
 			d) Number of special characters
 			e) Number of lines
 			f) Number of tabs
-		2) Other
+		2) Grab current string value
 
 	*/
 
@@ -102,4 +102,9 @@
 			// (Future functionality)
 			// frmSA.txtNumeric.value = mainString.match(/[0-9]/g).length;
 			
+		}
+
+	// 2) Grab current string value
+		function grabString() {
+			return frmSA.txtareaMain.value;
 		}
