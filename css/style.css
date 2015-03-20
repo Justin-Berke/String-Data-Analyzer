@@ -3,6 +3,27 @@ body {
 	margin: -5px 20px;
 }
 
+h1 {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 2px;
+
+}
+
+small {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 3.5px;
+	font-style: italic;
+}
+
 textarea {
 	width: 100%;
+}
+
+.analyze {
+	position: absolute;
+	bottom: 6px;
+	right: 16px;
+	width: auto;
+	background-color: #eee;
+	font-weight: bold;
 }

@@ -3,22 +3,31 @@
 <head>
 	<!-- Project available at htt://... -->
  
-	<meta http-equiv="refresh" content=".5">
+	<meta http-equiv="refresh" content="-.5">
 	
-	<!-- Bootstarp -->
+	<!-- Bootstarp & Styles -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-
+  <form name="frmSA">
 	<div class="container">
 		<div class="row">			
-			<div class="col-sm-12">
-				<h1>String Data Analyzer<br>
-					<small>Enter text to analyze.</small></h1>
-				<textarea name="txtMain" placeholder="Enter text to analyze here." rows="10" autofocus="true"></textarea><br>
+			<div class="col-xs-12 btn-group">
+				<h1>String Analyzer<br>
+					<small class="subTitle">Enter text to analyze.</small>
+				</h1>
+				
+					<textarea id="txtareaMain" placeholder="Enter text to analyze here." rows="10" autofocus="true" onfocus="setfocus('txtareaMain')" onblur="analyzeString()" onkeyup="analyzeString()" onpaste="analyzeString()"></textarea>
+
+					<button type="button" class="analyze form-control btn-xs">Analyze</button><br>
 			</div>
 		</div>
 
@@ -27,27 +36,55 @@
 			<div class="col-sm-4">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Characters</span>
-						<input type="text" class="form-control" placeholder="#" aria-describedby="basic-addon1">
+						<input type="text" id="txtCharacters" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtCharacters')">
 				</div>
 			</div>
 
 			<div class="col-sm-4">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Words</span>
-						<input type="text" class="form-control" placeholder="#" aria-describedby="basic-addon1">
+						<input type="text" id="txtWords" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtWords')">
 				</div>
 			</div>
 
 			<div class="col-sm-4">
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1">Special Characters</span>
-						<input type="text" class="form-control" placeholder="#" aria-describedby="basic-addon1">
+						<input type="text" id="txtSpecialCharacters" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtSpecialCharacters')">
 				</div>
-			</div>	
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Lines</span>
+						<input type="text" id="txtLines" class="form-control" placeholder="1" aria-describedby="basic-addon1" onfocus="setfocus('txtLines')">
+				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Tabs</span>
+						<input type="text" id="txtTabs" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtTabs')">
+				</div>
+			</div>
+
+			<div class="col-sm-4">
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon1">Custom</span>
+						<input type="text" id="txtCustom" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtCustom')">
+				</div>
+			</div>
+		</div>
 	</div>
+  </form>
 
 	<!-- Javascript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
+	<!-- Load analyzer script -->
+	<script type="text/javascript" src="./js/StringAnalyzer.js"></script>
+
 </body>
 </html>
