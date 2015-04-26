@@ -78,31 +78,47 @@
 				frmSA.txtLines.value = "";
 				frmSA.txtTabs.value = "";
 				frmSA.txtCustom.value = "";
-			} else {}
+			} else {
+			    // b) Total number of characters
+			    frmSA.txtCharacters.value = mainString.length;
 
-			// b) Total number of characters
-				frmSA.txtCharacters.value = mainString.length;
+			    // c) Number of words
+			    if (mainString.match(/(\w+)/g) === null) {
+			        frmSA.txtWords.value = "";
+			    } else {
+			        frmSA.txtWords.value = mainString.match(/(\w+)/g).length;
+			    }
 
-			// c) Number of words
-				frmSA.txtWords.value = mainString.match(/(\w+)/g).length;
+			    // d) Number of special characters
+			    if (mainString.match(/[^a-z ^A-Z ^0-9 ]/g) === null) {
+			        frmSA.txtSpecialCharacters.value = "";
+			    } else {
+			        frmSA.txtSpecialCharacters.value = mainString.match(/[^a-z ^A-Z ^0-9 ]/g).length;
+			    }
 
-			// d) Number of special characters
-				frmSA.txtSpecialCharacters.value = mainString.match(/[^a-z ^A-Z ^0-9 ]/g).length;
-				
-			// e) Number of lines
-				frmSA.txtLines.value = (mainString.match(/\n/g).length) + 1;
+			    // e) Number of lines
+			    if (mainString.match(/\n/g) === null) {
+			        frmSA.txtLines.value = "";
+			    } else {
+			        frmSA.txtLines.value = (mainString.match(/\n/g).length) + 1;
+			    }
 
-			// f) Number of tabs
-				frmSA.txtTabs.value = mainString.match(/\t/g).length;
+			    // f) Number of tabs
+			    if (mainString.match(/\t/g) === null) {
+			        frmSA.txtTabs.value = "";
+			    } else {
+			        frmSA.txtTabs.value = mainString.match(/\t/g).length;
+			    }
 
-			// Search specific character/string
-			// (Future functionality)
+			    // Search specific character/string
+			    // (Future functionality)
 
-			// Number of numeric characters
-			// (Future functionality)
-			// frmSA.txtNumeric.value = mainString.match(/[0-9]/g).length;
+			    // Number of numeric characters
+			    // (Future functionality)
+			    // frmSA.txtNumeric.value = mainString.match(/[0-9]/g).length;
+			}
 			
-		}
+		    }
 
 	// 2) Grab current string value
 		function grabString() {
