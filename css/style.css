@@ -6,13 +6,19 @@ body {
 h1 {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 2px;
+	vertical-align: bottom;
+
+
 
 }
 
 small {
 	font-family: 'Lato', sans-serif;
-	letter-spacing: 3.5px;
+	letter-spacing: 6.5px;
 	font-style: italic;
+	position: relative;
+	top: -6px;
+	
 }
 
 textarea {
