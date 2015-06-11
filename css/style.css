@@ -1,5 +1,5 @@
 body {
-	background-color: #eef;
+	background-color: #f5f5ff;
 	margin: -5px 20px;
 }
 
@@ -7,7 +7,7 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 2px;
 	vertical-align: bottom;
-
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 
 
 }
@@ -15,6 +15,7 @@ h1 {
 small {
 	font-family: 'Lato', sans-serif;
 	letter-spacing: 6.5px;
+	text-shadow: 0 0 0;
 	font-style: italic;
 	position: relative;
 	top: -6px;
@@ -23,6 +24,20 @@ small {
 
 textarea {
 	width: 100%;
+	border-radius: 5px;
+}
+
+.input-group {
+	padding-bottom: 3px;
+	max-width: 262px;
+}
+
+.input-group-addon {
+	width: 65px;
+}
+
+.input-addon-custom {
+
 }
 
 .analyze {

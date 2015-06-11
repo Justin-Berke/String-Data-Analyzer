@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Project available at htt://... -->
+	<!-- Project available at https://github.com/Justin-Berke/String-Data-Analyzer -->
  
 	<meta http-equiv="refresh" content="-.5">
 	
@@ -35,49 +35,58 @@
 			</div>
 		</div>
 
-
+		<!-- First Row -->
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="input-group">
-					<span class="input-group-addon" id="basic-addon1">Characters</span>
-						<input type="text" id="txtCharacters" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtCharacters')">
+					<!-- Characters -->
+					<span class="input-group-addon input-addon-custom" id="basic-addon1">Characters</span>
+						<input type="text" id="txtCharacters" class="form-control" placeholder="0" aria-describedby="counter-characters" onfocus="setfocus('txtCharacters')">
 				</div>
 			</div>
 
 			<div class="col-sm-4">
 				<div class="input-group">
+					<!-- Words -->
 					<span class="input-group-addon" id="basic-addon1">Words</span>
-						<input type="text" id="txtWords" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtWords')">
+						<input type="text" id="txtWords" class="form-control" placeholder="0" aria-describedby="counter-words" onfocus="setfocus('txtWords')">
 				</div>
 			</div>
 
 			<div class="col-sm-4">
 				<div class="input-group">
+					<!-- Special Characters -->
 					<span class="input-group-addon" id="basic-addon1">Special Characters</span>
-						<input type="text" id="txtSpecialCharacters" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtSpecialCharacters')">
+						<input type="text" id="txtSpecialCharacters" class="form-control" placeholder="0" aria-describedby="counter-special" onfocus="setfocus('txtSpecialCharacters')">
 				</div>
 			</div>
 		</div>
 
+		<!-- Second Row -->
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="input-group">
+					<!-- Lines -->
 					<span class="input-group-addon" id="basic-addon1">Lines</span>
-						<input type="text" id="txtLines" class="form-control" placeholder="1" aria-describedby="basic-addon1" onfocus="setfocus('txtLines')">
+						<input type="text" id="txtLines" class="form-control" placeholder="1" aria-describedby="counter-lines" onfocus="setfocus('txtLines')">
 				</div>
 			</div>
 
 			<div class="col-sm-4">
 				<div class="input-group">
+					<!-- Tabs -->
 					<span class="input-group-addon" id="basic-addon1">Tabs</span>
-						<input type="text" id="txtTabs" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtTabs')">
+						<input type="text" id="txtTabs" class="form-control" placeholder="0" aria-describedby="counter-tabs" onfocus="setfocus('txtTabs')">
 				</div>
 			</div>
 
 			<div class="col-sm-4">
-				<div class="input-group">
+				<div class="input-group btn-group">
+					<!-- Custom -->
 					<span class="input-group-addon" id="basic-addon1">Custom</span>
-						<input type="text" id="txtCustom" class="form-control" placeholder="0" aria-describedby="basic-addon1" onfocus="setfocus('txtCustom')">
+						<input type="text" id="txtCustomInput" class="form-control" placeholder="Enter Search Term" aria-describedby="input-custom" onfocus="setfocus('txtCustomInput')" style="float: left;">
+						<input type="text" id="txtCustom" class="form-control" placeholder="0" aria-describedby="counter-custom" onfocus="setfocus('txtCustom')" style="float: right;">
+
 				</div>
 			</div>
 		</div>

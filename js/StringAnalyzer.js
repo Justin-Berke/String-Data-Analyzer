@@ -1,5 +1,5 @@
-/* String Analyzer by Justin Berke
-	V.2015.03.16
+/* String Analyzer by Justin Berke & Chris Kroll
+	V.2015.06.11
 	This toolset is designed to run rapid reports on packets
 		of string data that is either typed or pasted into the
 		Analyzer text area.
@@ -12,8 +12,7 @@
 		  http://jsfiddle.net/1qyktzyg
 
 	Issues:
-		Functions b) & c) work okay. After that, the preveious case must 
-			be true before the following lines will fire properly.
+		None
 
 	Notes:
 		http://www.w3schools.com/js/js_strings.asp
@@ -54,7 +53,7 @@
 // A) Global functions, used by all forms
 // *****************************************************
 	//1) Collect all input elements
-		var elements = document.getElementsByTagName("input");
+		//var elements = document.getElementsByTagName("input");
 
 	// 2) Select all text in textbox on focus
 		function setfocus(id) {
@@ -67,7 +66,7 @@
 // *****************************************************
 	// 1) Main analyzer - This is the main function to fire analysis
 		function analyzeString() {
-		// Grab new value
+		// Grab new values
 			var mainString = grabString();
 
 		// a) Reset form if blank
